@@ -1,20 +1,22 @@
 print("\t\t\t\t**Guess the number**\t\t\t\t ")
 
-guess = 0
-pick=230
+import random
+
+main_num=random.randint(100,999)
+guess=0
 while True:
-    ur = int(input("Guess a 3 digit number"))
+    ur = int(input("Guess a 3 digit number-->\t"))
     if ur < 0: 
       print("invaliddd")
       exit()
-    if ur < pick :
+    elif ur < main_num:
       print("Guess higher")
       guess+=1 
-    if ur > pick :
+    elif ur > main_num:
       print("Guess lower")
       guess+=1
       continue
-    elif ur == pick :
+    elif ur == main_num:
       print("You got it gal")
       break
     else :
@@ -22,7 +24,4 @@ while True:
 
 print ("Congratulations!! It only took you ",guess,"attempts to guess the number successfully")
       
-
-
-        
     
